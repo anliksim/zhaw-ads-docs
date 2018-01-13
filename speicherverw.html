@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Datenstrukturen · GitBook</title>
+        <title>Speicherverwaltung · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="rekursion.html" />
+    <link rel="next" href="fragen.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="hashing.html" />
     
 
     </head>
@@ -106,7 +106,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="datenstruct.html">
+        <li class="chapter " data-level="1.2" data-path="datenstruct.html">
             
                 <a href="datenstruct.html">
             
@@ -184,7 +184,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="speicherverw.html">
+        <li class="chapter active" data-level="1.8" data-path="speicherverw.html">
             
                 <a href="speicherverw.html">
             
@@ -253,7 +253,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Datenstrukturen</a>
+        <a href="." >Speicherverwaltung</a>
     </h1>
 </div>
 
@@ -268,42 +268,101 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="datenstrukturen">Datenstrukturen</h1>
-<h2 id="abstrakt-adt">Abstrakt (ADT)</h2>
+                                <h1 id="speicherverwaltung">Speicherverwaltung</h1>
 <ul>
-<li>Schnittstelle durch Interfaces</li>
-<li>Implementierung durch Klasse</li>
+<li>Speicheraufbau: Stack, Heap, Statische Daten, Argumente, Programm-Code, Laufzeitsystem</li>
 </ul>
-<h2 id="stack">Stack</h2>
+<h2 id="daten">Daten</h2>
 <ul>
-<li>LIFO - push,pop,isEmpty</li>
-<li>optional peek,removeAll,isFull</li>
-<li>Anwendung: Methoden (param, var, address), alter Taschenrechner, Klammersetzung</li>
+<li>Argumente: beim Aufruf mitgegebene Werte</li>
+<li>Programm Code: ausf&#xFC;hrbare Instruktionen</li>
+<li>Laufzeitsystem: z.B. Kopie von Datei-Puffern</li>
 </ul>
-<h2 id="listen">Listen</h2>
+<h3 id="stack">Stack</h3>
 <ul>
-<li>add,add(index),get,remove,size,isEmpty</li>
-<li>LinkedList: Mutation schnell, Zugriff langsam </li>
-<li>ArrayList: Mutation langsam (je nach Besetzung), Zugriff schnell, Array</li>
-<li>Sortierte Liste - Elemente werden sortiert eingef&#xFC;gt</li>
+<li>R&#xFC;cksprungadressen, lokale Variablen</li>
+<li>Methodenaufruf: Activation Record / Frame</li>
+<li>effizient, rekursive Aufrufe m&#xF6;glich</li>
+<li>Werte nicht abrufbar nach return</li>
 </ul>
-<h2 id="queue">Queue</h2>
+<h3 id="heap">Heap</h3>
 <ul>
-<li>FIFO - enqueue,dequeue,isEmpty</li>
-<li>optional peek,removeAll,isFull</li>
-<li>Anwendung: Drucker, Warteschlangen, gestaffelter Zugriff</li>
+<li>Dynamische Daten als Pointer/Referenzen</li>
+<li>rekursive Aufrufe, dynamische Datenstrukturen m&#xF6;glich</li>
+<li>Zuteilung/Freigabe relativ rechenintensiv</li>
 </ul>
-<h3 id="ringbuffer">Ringbuffer</h3>
-<h3 id="priority-queue">Priority Queue</h3>
+<h3 id="statische-daten">Statische Daten</h3>
 <ul>
-<li>H&#xF6;here Prio nach vorne, dann gleiche Prio in Reihenfolge</li>
-<li>Anwendung: Scheduling von Prozessen, Prioritisierung (Taskliste, Rechnungen, etc.)</li>
+<li>Konstanten, static</li>
+<li>Speicher kann einmal beim Start alloziert werden</li>
+<li>Keine dynamischen Datenstrukturen m&#xF6;glich</li>
 </ul>
-<h2 id="set">Set</h2>
+<h2 id="speicherverwaltung">Speicherverwaltung</h2>
 <ul>
-<li>ungeordnete Menge ohne Duplikate</li>
-<li>add, contains, containsAll (subset), addAll (union), retainAll (intersect), removeAll (difference)</li>
-<li>TreeSet -&gt; nat&#xFC;rliche Anordnung</li>
+<li>Listen f&#xFC;r belegten und freien Speicher f&#xFC;hren</li>
+<li>Fragmentierung -&gt; periodisch defragmentieren</li>
+<li>Zu wenig Speicher angefordert -&gt; Referenz-Variablen automatisch auf Default initialisieren, Bereichsabfragen auf G&#xFC;ltigkeit pr&#xFC;fen</li>
+<li>Speicher nicht freigegeben -&gt; Memory Leak, abhilfe durch Speicherverwaltung </li>
+<li>Speicher wird zu fr&#xFC;h freigegeben -&gt; Dangling Pointer, abhilfe durch Speicherverwaltung</li>
+</ul>
+<h3 id="referenzz&#xE4;hlung">Referenzz&#xE4;hlung</h3>
+<ul>
+<li>Verweise auf ein Objekt z&#xE4;hlen</li>
+<li>L&#xF6;schen wenn keine Referenz mehr existiert</li>
+<li>Vorteile: einfach, geringer Aufwand, Speicher wird schnell freigegeben</li>
+<li>Nachteile: Programmiere muss z&#xE4;hlen, zus&#xE4;tlziche Operationen bei Pointer-Zuweisung, zyklische Datenstrukturen k&#xF6;nnen nicht freigegeben werden</li>
+<li>Smart-Pointer: Z&#xE4;hlen selber Zuweisungen auf und ab</li>
+</ul>
+<h3 id="garbage-collector">Garbage Collector</h3>
+<h4 id="mark-sweep-gc">Mark-Sweep GC</h4>
+<ul>
+<li>Speicher wird bei Bedarf freigegeben, nicht sofort</li>
+<li>Mark: von Wurzelobject ausgehend alle erreichbaren Bl&#xF6;cke markieren</li>
+<li>Sweep: sequentiell durch den Heap alle nicht markierten Bl&#xF6;cke freigeben, Markierungen l&#xF6;schen</li>
+<li>Vorteile: keine zus&#xE4;tzlichen Operationen bei Pointer-Zuweisung, zyklische Strukturen k&#xF6;nnen aufgel&#xF6;st werden</li>
+<li>Nachteile: Aufwand, Programm muss gestoppt werden, Fragmentierung</li>
+</ul>
+<h4 id="copying-gc">Copying GC</h4>
+<ul>
+<li>Zwei Semi-Spaces mit aktuellen und obsoleten Daten, Daten werden umkopiert</li>
+<li>Cheney&apos;s Copying Algorithm (drei Farben): Breitensuche</li>
+<li>Vorteile: keine Fragmentierung, Suche nach freien Bl&#xF6;cken entf&#xE4;llt</li>
+<li>Nachteile: doppelt so viel Speicher n&#xF6;tig, langer Unterbruch, Lokalit&#xE4;t des RAM Zugriffs geht verloren</li>
+</ul>
+<h4 id="generational-gc">Generational GC</h4>
+<ul>
+<li>Hotspot Heap: Young Gen (eden, Survivor Space (s0,s1)), Old Gen (Tenured), Perm Gen (Permanent)</li>
+<li>Young Gen:<ul>
+<li>Neue Objeckte werden hier angelegt</li>
+<li>Minor Collection - Stop the World</li>
+</ul>
+</li>
+<li>Old Gen: <ul>
+<li>GC Survivors werden hier abgelegt</li>
+<li>Major Collection - Stop the World</li>
+</ul>
+</li>
+<li>Perm Gen: <ul>
+<li>Metadaten f&#xFC;r die JVM welche Klassen und Methoden beschreiben</li>
+<li>Wird bei Full Collection einbezogen</li>
+</ul>
+</li>
+</ul>
+<h3 id="weak-references">Weak References</h3>
+<ul>
+<li>Objekte in Sammlungen k&#xF6;nnen nicht freigegeben werden</li>
+<li>Weak References werden nicht traversiert</li>
+<li>Vorteil: Sammlungen k&#xF6;nnen freigegeben werden</li>
+<li>Nachteil: Dangling Pointer</li>
+</ul>
+<h3 id="finalizer">Finalizer</h3>
+<ul>
+<li>Freigabe von Ressources sp&#xE4;testens bei l&#xF6;schen von Objekt</li>
+<li>Zweistufig wegen z.B. Referenz auf sich selbst<ul>
+<li>1 GC - finalize aufrufen und in Liste speichern</li>
+<li>2 GC - Objekte in Finalized-Liste die nicht markiert wurden freigeben</li>
+</ul>
+</li>
 </ul>
 
                                 
@@ -332,12 +391,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="hashing.html" class="navigation navigation-prev " aria-label="Previous page: Hashing">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="rekursion.html" class="navigation navigation-next " aria-label="Next page: Rekursion">
+                <a href="fragen.html" class="navigation navigation-next " aria-label="Next page: Kontrollfragen">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -348,7 +407,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Datenstrukturen","level":"1.2","depth":1,"next":{"title":"Rekursion","level":"1.3","depth":1,"path":"rekursion.md","ref":"rekursion.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":false,"fontSize":11,"fontFamily":"Calibri","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"datenstruct.md","mtime":"2018-01-13T20:49:15.957Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T22:17:40.655Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Speicherverwaltung","level":"1.8","depth":1,"next":{"title":"Kontrollfragen","level":"1.9","depth":1,"path":"fragen.md","ref":"fragen.md","articles":[]},"previous":{"title":"Hashing","level":"1.7","depth":1,"path":"hashing.md","ref":"hashing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":false,"fontSize":11,"fontFamily":"Calibri","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"speicherverw.md","mtime":"2018-01-13T22:16:56.347Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T22:17:40.655Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
