@@ -142,3 +142,77 @@ Was muss man tun um den binären Suchbaum in umgekehrter Reihenfolge auszugeben?
 * Inorder, aber zuerst den rechten Teilbaum verarbeiten
 
 
+## Balancierte Bäume
+
+Welche Aussagen über AVL sind korrekt?
+
+* Die Höhe des rechten im Vergleich zum linken Teilbaums ist +/- 1
+
+Welche Datenstruktur sind für die Speicherung der Daten auf einer Festplatte geeignet?
+
+* B-Baum
+
+Mit welcher Operation werden Bäume balanciert?
+
+* Rotationen
+
+Wieviel Schlüsselwerte können in einer Seite eines B-Baums mit Ordnung 7 max gespeichert werden?
+
+* 7
+
+Wie viele Werte können in einem Baum mit Höhe/Tiefe 7 max gepseichert werden?
+
+* $$ 2^7-1 = 127 $$
+
+
+## Graphen 1
+
+Welche Aussagen über Graphen stimmen?
+
+* Einen ungerichteten kann man auch als gerichteten Graphen darstellen
+* Ein ungerichteter Graph kann gewichtet sein
+* Die Kanten in einem gerichteten Graph habe eine Richtung
+
+Für welche Art von Graph stimmt "Es gibt keinen geschlossenen Rundweg entlang von gerichteten Kanten"?
+
+* gerichtete, azyklische Graphen
+
+Welches ist die speichereffizientiste Implementation eines Graphen mit wenig Kanten im Vergleich zu Knoten?
+
+* Adjazenzliste
+
+Wie funktioniert Tiefensuche auch bei Graphen mit Zyklen?
+
+* Markieren der besuchten Knoten
+
+Welche Aussagen sind korrekt?
+
+* Bäume sind auch Graphen
+* Zyklische, doppelt verkettete Listen sind ungerichtete Graphen
+* Ungerichtete Kanten können durch zwei gerichtete ersetzt werden
+
+
+## Graphen 2
+
+Was findet der Dijkstra Algorithmus?
+
+* immer den kürzesten Weg
+
+Wie bestimmt man in einem Projekt den kritischen Pfad?
+
+* Dijkstra Algorithmus anwenden
+
+Wo wird der maximale Fluss verwendet?
+
+* Verkehrsleittechnik
+* Stromleittechnik
+
+Auf welchen Datenstrukturen basiert der Heap in Java?
+
+* eine Liste
+* ein Graph
+* ein Array von Bytes
+
+Was macht man beim topologischen Sortieren?
+
+* Eingehende Kanten zählen
