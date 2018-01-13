@@ -73,7 +73,6 @@ Wie erlaubt man Klassen, welche das Comparable Interface implementieren?
 
 Was bedeutet Type Erasure?
 
-* Der Typ wird vom Compiler gelöscht
 * Zur Laufzeit sind keine Typeninformationen verfügbar
 
 

@@ -9,25 +9,26 @@
 
 * LIFO - push,pop,isEmpty
 * optional peek,removeAll,isFull
-* Anwendung: alter Taschenrechner, Klammersetzung
+* Anwendung: Methoden (param, var, address), alter Taschenrechner, Klammersetzung
 
 ## Listen
 
 * add,add(index),get,remove,size,isEmpty
-* LinkedList: 
-* ArrayList: 
+* LinkedList: Mutation schnell, Zugriff langsam 
+* ArrayList: Mutation langsam (je nach Besetzung), Zugriff schnell, Array
 * Sortierte Liste - Elemente werden sortiert eingefügt
 
 ## Queue
 
 * FIFO - enqueue,dequeue,isEmpty
 * optional peek,removeAll,isFull
-* Anwendung: Drucker, Warteschlangen
+* Anwendung: Drucker, Warteschlangen, gestaffelter Zugriff
 
 ### Ringbuffer
 
 ### Priority Queue
 
+* Höhere Prio nach vorne, dann gleiche Prio in Reihenfolge
 * Anwendung: Scheduling von Prozessen, Prioritisierung (Taskliste, Rechnungen, etc.)
 
 
