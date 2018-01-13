@@ -1,5 +1,5 @@
 {
-	"plugins": [],
+	"plugins": ["katex"],
 	"pdf": {
 		"pageNumbers": false,
 		"fontSize": 11,
