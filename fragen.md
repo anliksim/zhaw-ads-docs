@@ -31,3 +31,52 @@ Für welche der folgende Paare gilt g(n) = O(f(n))?
 * $$ nlogn \neq O(n^2) $$
 * $$ 7n^2 = O(176n^2-36n) $$
 * $$ n(logn)^2 \neq O(nlogn+n^{1/2}) $$
+
+
+## Listen
+
+In einer einfach verketteten Liste zeigt der -head- auf null, d.h.?
+
+* die Liste ist leer
+
+Welche Operation in einer einfach verketteten List ist teuer?
+
+* Letztes Element löschen
+
+Wie gross ist die Laufzeit für suchen in einer unsortierten, doppelt verketteten Liste?
+
+* linear O(n)
+
+In welcher Listenimplementations geht das einfügen bei 100k Einträgen schneller?
+
+* LinkedList, falls die ArrayList nicht auf mehr als 100k Einträge initialisiert wurde
+
+
+## Generics
+
+Was machen Generics?
+
+* Generics ermöglichen die Festlegung der Typen zur Übersetzungszeit (compile time).
+
+Was sind die Vorteile der Verwendung generischer Datenstrukturen?
+
+* Es müssen weniger Laufzeuttests durchgeführt werden (wegen type safety/compile time checks)
+* Datenstrukturen können für verschiedene Typen programmiert/verwendet werden
+ 
+Wie deklaraiert man Collections von beliebigem Typ?
+
+* Collection<?>
+
+Wie erlaubt man Klassen, welche das Comparable Interface implementieren?
+
+* <? extends Comparable>
+
+Was bedeutet Type Erasure?
+
+* Der Typ wird vom Compiler gelöscht
+* Zur Laufzeit sind keine Typeninformationen verfügbar
+
+
+## Rekursion
+
+
