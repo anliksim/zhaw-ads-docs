@@ -107,3 +107,38 @@ Was ist ein Indiz dafür, dass ein Programm rekursiv ist?
 * Das Programm ruft sich selber auf
 
 
+## Bäume
+
+Welche Aussagen über Bäume sind korrekt?
+
+* Ein Baum hat immer genau eine Wurzel
+* In einem binären Baum hat jeder Knoten höchstens zwei Kinder
+
+Welche Aussagen zur Traversierung sind korrekt?
+
+* Beim Inorder kommt der aktuelle Knoten vor den Knoten des rechten Teilbaums
+* Pre- und Postorder geben immer gleichviele Knoten aus
+* Beim Preorder kommt der aktuelle Knoten vor den Knoten des linken Teilbaums
+
+Welche Art von Baum Traversierung ergibt 2,7,1,6,11,3,5,4,9?
+```
+.........3......
+......./..\.....
+......7....5....
+..../.\.....\...
+..2...6......9..
+...../.\..../...
+....1..11..4....
+```
+
+* Inorder
+
+Welche Aussage über binäre Suchbäume sind korrekt?
+
+* Grösstes Element hat keinen rechten Nachfolger
+
+Was muss man tun um den binären Suchbaum in umgekehrter Reihenfolge auszugeben?
+
+* Inorder, aber zuerst den rechten Teilbaum verarbeiten
+
+
