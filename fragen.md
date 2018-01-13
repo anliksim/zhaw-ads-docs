@@ -216,3 +216,88 @@ Auf welchen Datenstrukturen basiert der Heap in Java?
 Was macht man beim topologischen Sortieren?
 
 * Eingehende Kanten zählen
+
+
+## Hashtabellen
+
+Für welche Art von Daten kann man einfach Hash-Werte berechnen?
+
+* Strings
+* Arrays von Strings
+* Ganze Zahlen
+* Fliesskommazahlen
+
+Was sind Nachteile von linearem gegenüber quadratischem Sondieren?
+
+* Es bilden sich vermehrt Cluster
+
+Was muss man tun wenn die Hash-Tabelle voll ist?
+
+* Vergrössern und alle Werte re-hashen
+
+Ab welchem Belegungsgrad der Schlüsseltabelle treten beim Hashing vermehrt Kollisionen auf?
+
+* 0.8
+
+Welches sind die Vorteile von Hashtabellen gegenüber Bäumen
+
+* O(1) vs. O(logn)
+* Sehr einfache Implementierung
+
+
+## Sortieren 1
+
+Wie sieht die Worst-Case Eingabe aus, wenn wir mit Bubble Sort absteigend sortieren wollen?
+
+* Die Daten sind aufsteigend sortiert
+
+Welcher Algorithmus beschreibt "Im Stapel Karten nach der kleinsten Zahl suchen und diese auf einen neuen Stapel legen"?
+
+* Selection Sort
+
+Wie verhält sich Insertion Sort bei sortierter Eingabe?
+
+* Best Case, Ordnung O(n)
+
+Von was hängt die Laufzeit der Sortieralgorithmen ab?
+
+* Ordnung des Algorithmus
+* Anzahl Werte
+* Datentyp des Sortierschlüssels
+* sonstige Auslastung des Rechners
+
+Bei Messungen ist Bubble Sort der schnellste, was könnte der Grund sein?
+
+* Testdaten leigen in sortierter Reihenfolge vor
+
+
+## Sortieren 2
+
+Welche ussagen treffen auf Quicksort's Divide-and-Conquer zu?
+
+* Teilt das Problem auf und löst Teilprobleme
+
+Welches sind praktikable (evtl nicht optimale) Strategien bei der Pivot Wahl bei Quicksort?
+
+* Wert in der Mitte des Arrays nehmen
+* Wert beliebig auswählen
+
+Was bedeutet Stabilität im Zusammenhang mit Sortieralgorithmen?
+
+* Einmal sortierte Folgen behalten ihre Reihenfolge
+
+Wie fügt man am schnellsten 1mil sortierten Werten 100 hinzu, sortiert?
+
+* Insertion Sort
+* 100 Werte sortieren und Mergen
+
+Warum wird Quicksort trotz Worst Case $$O(n^2)$$ verwendet?
+
+* Tritt sehr selten auf
+
+
+
+
+
+
+
