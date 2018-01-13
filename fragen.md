@@ -79,4 +79,31 @@ Was bedeutet Type Erasure?
 
 ## Rekursion
 
+Warum braucht ein rekursives Programm mehr Speicher als ein iteratives?
+
+* Bei jedem Methodenaufruf wird die Rücksprungadresse gespeichert
+
+Kann man jeden rekursiven Algorithmus in einen iterativen umwandeln?
+
+* Ja (z.B. tail recursion - compiler optimiert automatisch)
+
+Was ist die Idee für den rekursiven Algorithmus für die Türme von Hanoi?
+
+* Aufrufen von Algorithmus für die obersten n-1 Scheiden - verschiebt Teilturm, dann die unterste Scheibe auf den anderen Stapel verschieben
+
+Was passiert beim Aufruf dieser Method mit n=5?
+
+```java
+  public int fac(int n) {
+    return n * fac(n-1);
+  }
+
+```
+
+* Fehlermeldung (StackOverflowError) - es fehlt die Abbruchbedingung
+
+Was ist ein Indiz dafür, dass ein Programm rekursiv ist?
+
+* Das Programm ruft sich selber auf
+
 
