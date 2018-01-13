@@ -59,6 +59,6 @@ git add -A
 git commit -F $MSG_FILE
 git push
 
-rm -f msg.tmp
+rm -f ../msg.tmp
 
 
