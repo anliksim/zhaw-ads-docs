@@ -5,6 +5,7 @@
 * [Rekursion](rekursion.md)
 * [Komplexität](komplex.md)
 * [Big O Cheatsheet](bigo.md)
+* [Graphen](graphen.md)
 * [Suche](suche.md)
 * [Hashing](hashing.md)
 * [Speicherverwaltung](speicherverw.md)
