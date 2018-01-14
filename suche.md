@@ -11,3 +11,22 @@
 * falls $$a[m] > s$$ -> _m_ auf _r_ setzen
 * falls $$a[m] == s$$ -> gefunden
 * falls $$l+1 >= r$$ -> nicht gefunden
+
+
+## Indexierung
+
+* Direkte Dateien -> Textdokumente
+* Index -> Alphabetische Liste mit Stickwörtern -> Verweis auf invertierte Datei
+* Invertierte Datei -> Verweisen auf alle direkten Dokumente mit einem Stichwort
+
+
+## Levenshtein Distanz
+
+* Unscharfe Übereinstimmung, Editierdistanz
+* Wieviel Editieroperationen sind minimal nötig für die Stringumwandlnug
+
+
+## Regex
+
+* Suchen nach Mustern im Text
+* Pattern matching
