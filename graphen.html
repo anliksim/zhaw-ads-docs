@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Graphen · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="suche.html" />
+    
+    
+    <link rel="prev" href="bigo.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="datenstruct.html">
+            
+                <a href="datenstruct.html">
+            
+                    
+                    Datenstrukturen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="rekursion.html">
+            
+                <a href="rekursion.html">
+            
+                    
+                    Rekursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="komplex.html">
+            
+                <a href="komplex.html">
+            
+                    
+                    Komplexität
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="bigo.html">
+            
+                <a href="bigo.html">
+            
+                    
+                    Big O Cheatsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="graphen.html">
+            
+                <a href="graphen.html">
+            
+                    
+                    Graphen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="suche.html">
+            
+                <a href="suche.html">
+            
+                    
+                    Suche
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="speicherverw.html">
+            
+                <a href="speicherverw.html">
+            
+                    
+                    Speicherverwaltung
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="fragen.html">
+            
+                <a href="fragen.html">
+            
+                    
+                    Kontrollfragen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="glossar.html">
+            
+                <a href="glossar.html">
+            
+                    
+                    Glossar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Graphen</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="graphen">Graphen</h1>
+<ul>
+<li>Shortest Path: K&#xFC;rzeste Verbindung von A nach B</li>
+<li>Topological Sort: Reihenfolge von T&#xE4;tigkeiten aus einem Netzplan erstellen</li>
+<li>Critical Path: Minial ben&#xF6;tigte Zeit bei optimaler Reihenfolge</li>
+<li>Maximal Flow: Maximaler Durchsatz von A nach B</li>
+<li>Traveling Salesman: K&#xFC;rzester Weg um alle Punkte anzufahren</li>
+</ul>
+<h2 id="graph">Graph</h2>
+<p>Definition: Ein Graph <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>=</mo><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">G=(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">G</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span> besteht aus einer endlichen Menge von Knoten <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> und einer Menge von Kanten <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>&#x2286;</mo><mi>V</mi><mo>&#xD7;</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">E \subseteq V \times V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mrel">&#x2286;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span></p>
+<ul>
+<li>Knoten: Objekte mit Namen und anderen Attributen</li>
+<li><p>Kanten: Verbindungen zwischen zwei Knoten u.U. mit Attributen  </p>
+</li>
+<li><p>Adjacent: benachbart, falls eine Kante gibt</p>
+</li>
+<li>Verbundener/Kompletter Graph: Jeder Knoten ist mit jedem verbunden</li>
+<li>Verbundener Teilgraph: Graph aus untereinander nicht verbundenen Teilgraphen</li>
+<li>Ungerichteter Graph: Kanten ohne Pfeile -&gt; in beide Richtungen</li>
+<li>Gerichteter Graph: Kanten mit Pfeile -&gt; bestimmt Richtung</li>
+<li>Gewichteter Graph: Gewichtungsattribut auf Kante</li>
+<li>Dichter Graph (dense): Nur wenige Kanten fehlen</li>
+<li>D&#xFC;nner Graph (sparse): Nur wenige Kanten sind vorhanden</li>
+<li>Einfacher Pfad: Sequenz von benachbarten, einmaligen Knoten</li>
+<li>Pfadl&#xE4;nge: Anzahl Kanten des Pfads</li>
+<li>Zyklus: Anfangs- und Endknoten beim Pfad gleich</li>
+<li>Zyklischer Graph: Graph mit zyklischen Pfaden</li>
+<li>Azyklischer Graph: Graph ohne zyklische Pfade</li>
+</ul>
+<h3 id="adjazenzliste">Adjazenzliste</h3>
+<ul>
+<li>Knoten mit Liste der ausgehenden Kanten</li>
+<li><p>Kante mit Zielknoten und Attributen</p>
+</li>
+<li><p>Vorteil: Platzbedarf proportional zu #Knoten + #Kanten</p>
+</li>
+<li>Nachteil: Effizienz der Kanzensuche abh&#xE4;ngig von mittlerer Anzahl ausgehender Kanten pro Knoten</li>
+</ul>
+<h3 id="adjazenzmatrix">Adjazenzmatrix</h3>
+<ul>
+<li>Matrix mit boolean Werten -&gt; true heisst eine Verbindung existiert</li>
+<li>Gewicht anstatt boolean falls Gewichtet (0 f&#xFC;r keine Verbindung)</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>&#xD7;</mo><mi>N</mi></mrow><annotation encoding="application/x-tex"> N \times N </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">&#xD7;</span><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span> (N = #Knoten)</li>
+<li><p>Dreiecksmatrix falls ungerichtet (die h&#xE4;lfte reicht)</p>
+</li>
+<li><p>Vorteil: Berechnung der Adjazenz sehr effizient, einfach zu implementieren, speichereffizient falls dichter Graph</p>
+</li>
+<li>Nachteil: Speicheroverhead, teure Initialisierung,  w&#xE4;chst quadratisch</li>
+</ul>
+<h3 id="baum">Baum</h3>
+<p>Zusammenh&#xE4;ngender, gerichteter, zyklenfreier Graph mit genau einer Wurzel wobei zu jedem Knoten genau ein Pfad existiert.</p>
+<h2 id="traversierung">Traversierung</h2>
+<h3 id="tiefensuche">Tiefensuche</h3>
+<ul>
+<li>Vorw&#xE4;rts/Tiefer gehen bis alle Knoten besucht sind, dann Backtracking und weiter</li>
+<li>Depth-first entspricht der Preorder Traversierung (Stack)</li>
+</ul>
+<h3 id="breitensuche">Breitensuche</h3>
+<ul>
+<li>Zuerst alle benachbarten Knoten, danach n&#xE4;chstes Level</li>
+<li>Breadth-first entspricht der Levelorder Traversierung (Queue)</li>
+</ul>
+<h2 id="algorithmen">Algorithmen</h2>
+<h3 id="k&#xFC;rzester-pfad">K&#xFC;rzester Pfad</h3>
+<ul>
+<li>Vom Startpunkt aus Knoten mit Distanz markieren und Knoten von dem er erreicht wurde</li>
+<li>Vom Endpunkt aus R&#xFC;ckw&#xE4;rts den k&#xFC;rzesten Pfad bilden</li>
+<li>Gewichtete Kanten: Gewichtung als Distanz, k&#xFC;rzeste Distanz zu einem Knoten eintragen</li>
+</ul>
+<h4 id="dijkstra">Dijkstra</h4>
+<ul>
+<li>3 Gruppen: besuchte, benachbart zu besuchtem und unbesuchte Knoten</li>
+<li>Suche unter benachbarten Knoten denjenigen Pfad mit dem kleinsten Gewicht</li>
+<li>Besuche diesen und bestimme die benachbarten Knoten</li>
+<li>Breadth-first mit PriorityQueue</li>
+</ul>
+<h3 id="spanning-tree">Spanning Tree</h3>
+<ul>
+<li>Baum eines Graphen der alle Knoten enth&#xE4;lt</li>
+<li>Minimaler Spannbaum: Spannbaum eines gewichteten Graphen -&gt; Summe aller Kanten minimal</li>
+<li>Prim-Jarnik Algorithmus mit PriorityQueue f&#xFC;r minimalen Spannbaum (MST)</li>
+<li>Anwendung: Routing, Steckennetz f&#xFC;r St&#xE4;dte mit minimaler L&#xE4;nge</li>
+</ul>
+<h3 id="topologisches-sortieren">Topologisches Sortieren</h3>
+<ul>
+<li>Sortierung eines gerichteten Graphen</li>
+<li>Knoten eines gerichteten, unzyklischen Graphs in korrekter Reigenfolge auflisten</li>
+<li>Anwendung: Abh&#xE4;ngigkeiten in einem Programm, Compilation-Reihenfolge</li>
+</ul>
+<h3 id="maximaler-fluss">Maximaler Fluss</h3>
+<ul>
+<li>Kanten geben maximalen Fluss zwischen Knoten an</li>
+<li>3 Graphen, Original, Vorl&#xE4;ufiger-, Rest Fluss</li>
+<li>Pfad in vorl&#xE4;ufiger Fluss eintragen und im Rest l&#xF6;schen</li>
+<li>Fortfahren bis maximaler Fluss gefunden</li>
+</ul>
+<h2 id="traveling-salesman">Traveling Salesman</h2>
+<ul>
+<li>Finde die k&#xFC;rzeste Reiseroute wobei jede Stadt nur einmal besucht wird</li>
+<li>Kann nur durch probieren aller m&#xF6;glichen Wege gefunden werden</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bigo.html" class="navigation navigation-prev " aria-label="Previous page: Big O Cheatsheet">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="suche.html" class="navigation navigation-next " aria-label="Next page: Suche">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Graphen","level":"1.6","depth":1,"next":{"title":"Suche","level":"1.7","depth":1,"path":"suche.md","ref":"suche.md","articles":[]},"previous":{"title":"Big O Cheatsheet","level":"1.5","depth":1,"path":"bigo.md","ref":"bigo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":false,"fontSize":11,"fontFamily":"Calibri","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"graphen.md","mtime":"2018-01-14T10:00:59.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-14T10:04:09.319Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
