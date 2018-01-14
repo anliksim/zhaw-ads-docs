@@ -7,8 +7,8 @@
 ## Binary Search
 
 * Suche nach _s_ in sortiertem Array _a_ mit Index _l,m,r_
-* falls $$a[m] < s$$ -> _m_ auf _l_ setzen
-* falls $$a[m] > s$$ -> _m_ auf _r_ setzen
+* falls $$a[m] < s$$ -> _l_ auf _m_ setzen
+* falls $$a[m] > s$$ -> _r_ auf _m_ setzen
 * falls $$a[m] == s$$ -> gefunden
 * falls $$l+1 >= r$$ -> nicht gefunden
 
